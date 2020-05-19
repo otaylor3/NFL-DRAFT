@@ -21,6 +21,10 @@ h4 {
                 3px 3px #fe4902;
 }
 
+.done{
+  text-decoration: line-through;
+}
+
 #button {
 	border-radius: 4px;
 	/*height: 200px;*/

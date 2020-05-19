@@ -6,6 +6,22 @@ let listing = document.getElementById("check");
 let button2 = document.getElementById("submit3");
 let button3 = document.getElementById("submit4");
 let button4 = document.getElementById("submit5");
+let bucket = document.getElementById("delete1");
+let  garbage = document.getElementById("list");
+let delete1 = document.getElementById("delete1");
+let list1 = document.getElementsByClassName("trashy");
+
+
+//loop through list 
+const strike = () => {
+	for(var i = 0  ; i < list1.length; i++){
+		list1[i].addEventListener("click", strikeout);
+	}
+}
+//strikeout 
+const strikeout = () => {
+	this.classlist.toggle("done");
+}
 
 
 var input = playervalue.length;
@@ -36,6 +52,7 @@ kobe = new players("bryant", "shooter");
 function introduce () {
 	return kobe.introduce();
 }
+
 
 //creating new player to the fantasy board
 function fun (){
@@ -108,6 +125,30 @@ alert(supertds);
 // }
 
 // player.addEventListener("keypress",enter);
+
+//using the delete button 
+// const drop = () => {
+// 	let trash = getElementsByClassName("trashy");
+// 	let garbage = trash.parentNode;
+// 	garbage.removeChild(trash);
+  
+// }
+
+// function drop () {
+//         var garbage = document.getElementById("list");
+//         garbage.removeChild(garbage.childNodes);
+
+// }
+
+// Array.prototype.slice.call(delete1).forEach(function(item) {
+// 	item.addEventListener("click", function(e) {
+// 		e.target.parentNode.remove()
+// 	});
+
+// });
+
+// bucket.addEventListener("click", drop);
+
 button.addEventListener("click",fun);
 
 button1.addEventListener("click", newone);
